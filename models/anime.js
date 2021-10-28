@@ -2,6 +2,7 @@
 // Import Dependencies
 /////////////////////////////////////
 
+const { VirtualType } = require("mongoose")
 const mongoose = require("./connections")
 
 /////////////////////////////

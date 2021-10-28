@@ -5,13 +5,10 @@
     <a href="/anime/new"><button>Add Anime</button></a>
 
      {% for anime in animes %}
+     
     <h3>{{anime.title}}</h3>
     <a href= "/anime/{{ anime._id}}"><img src={{anime.img}}></a>
-    <video width="320" height="240" autoplay>
-        <source src={{anime.video}} type="video/mp4">
-        <source src={{anime.video}} type="video/ogg">
-
-      </video>
+ 
     {% endfor %}
     </div>
 {% endblock %}
