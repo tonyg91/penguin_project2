@@ -67,10 +67,17 @@ app.get("/anime/seed", (req, res) => {
     })
 })
 
-// //  Test route
-// app.get("/", (req, res) => {
-//     res.render("anime/index.liquid")
-// }) Heroku not loading index page
+//  Test route
+app.get("/", (req, res) => {
+    Anime.find({})
+    .then((animes) => {
+        res.render("anime/index.liquid", {animes})
+    })
+     // error handeling
+     .catch((error) => {
+        res.json((error))
+    })
+})
 
 // Register Anime Router 
 app.use("/anime", AnimeRouter)
