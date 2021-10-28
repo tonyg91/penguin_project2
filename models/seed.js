@@ -26,7 +26,7 @@ app.get("/anime/seed", (req, res) => {
         Anime.create(startAnime)
         .then((data) => {
             console.log(data)
-            db.close()
+            res.json(data)
         })
     })
 })
