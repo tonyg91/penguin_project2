@@ -1,0 +1,18 @@
+{% layout "layout.liquid" %} 
+
+{% block content %}
+      <div>
+        <article>
+            <h2>{{anime.title}}</h2>
+            <img src={{anime.img}}>
+            <h3>Description</h3>
+            {{anime.description}}
+        </article>
+
+        <a href="/anime/"><button>Back to Main Menu</button></a>
+        <a href="/anime/{{ anime._id }}/edit"><button>EDIT Anime</button></a>
+        <form action="/anime/{{ anime._id }}?_method=DELETE" method="POST">
+            <input class="delete" type="submit" value="Remove from Watchlist" />
+          </form>
+      </div>
+{% endblock %}

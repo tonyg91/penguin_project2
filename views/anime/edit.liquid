@@ -1,0 +1,47 @@
+{% layout "layout.liquid" %} 
+
+{% block content %}
+
+    <div>
+        <form action="/anime/{{anime._id}}?_method=PUT" method="POST">
+        <fieldset>
+            <legend>Edit {{anime.title}}</legend>
+              
+            <label>
+                Title:<input
+                type="text"
+                name="title"
+                placeholder="Anime Title"
+                value="{{anime.title}}"
+                />
+            </label>
+
+            <label>
+                Description:<input
+                type="text"
+                name="description"
+                placeholder="Anime Description"
+                value="{{anime.description}}"
+                />
+            </label>
+
+            <!-- <label>
+                Photo:<input type="| img_url: 'medium'" 
+                name="img" 
+                placeholder="Photo URL"
+                />
+            </label> -->
+
+            <!-- <label>
+                Video:<input
+                type="text"
+                name="title"
+                placeholder="Anime Title"
+                value="{{anime.title}}"
+                />
+            </label> -->
+        </fieldset>
+        <input type="submit" value="Update {{anime.title}}"/>
+        </form>
+    </div>
+{% endblock %}
