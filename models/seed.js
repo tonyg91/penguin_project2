@@ -11,7 +11,7 @@ const Anime = require("./anime")
 const db = mongoose.connection
 
 // Inital seed route
-db.on("open", () => {
+app.get("/anime/seed", (req, res) => {
     // Start anime
     const startAnime = [
         {title: "Attack on Titan",
