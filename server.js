@@ -49,7 +49,7 @@ app.use(express.static("public"))
 
 //  Test route
 app.get("/", (req, res) => {
-   res.render("anime/index.liquid")
+   res.render("index.liquid")
 })
 // user add to home page route attempt one
 // app.post("/home/new", (req, res) => {
