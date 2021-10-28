@@ -69,7 +69,7 @@ app.get("/anime/seed", (req, res) => {
 
 //  Test route
 app.get("/", (req, res) => {
-    res.send("This App is working")
+    res.render("anime/index.liquid")
 })
 
 // Register Anime Router 
