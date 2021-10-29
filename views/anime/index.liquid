@@ -1,14 +1,39 @@
 {% layout "layout.liquid" %} 
 
 {% block content %}
-    <div>
-    <a href="/anime/new"><button>Add Anime</button></a>
+<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://store-images.s-microsoft.com/image/apps.63538.14155264259827457.105488aa-806c-444a-891a-090775ca936e.f09463bc-891f-4f49-be4e-5773a5c60063?mode=scale&q=90&h=1080&w=1920" class="d-block w-100" alt="image1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://occ-0-1068-92.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeLs6vsoHZVYo0MeH0HcuOXXcXu1UsudNVY-bCjLOWhQZEwKECYgDvGnWddsw2zZComfftzeOANYDQP57qWwyyo30gMj.jpg?r=0cb" class="d-block w-100" alt="image2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://otakukart.com/wp-content/uploads/2021/04/wp6319738.jpg" class="d-block w-100" alt="image3">
+      </div>
+    </div>
+  </div>
 
+    <header>
+    <h1>Recommended Anime</h1>
+    <a href="/anime/new" ><button type="button" class="btn btn-primary">Add Anime</button></a>
+    <a href="/user/logout"><button type="button" class="btn btn-success">Logout</button></a>
+  </header>
+
+    
+    <!-- <div class="container"> -->
+        <div class="container-fluid">
+            <div class="row">
      {% for anime in animes %}
-     
-    <h3>{{anime.title}}</h3>
-    <a href= "/anime/{{ anime._id}}"><img src={{anime.img}}></a>
- 
+     <div class="col-md-3">
+     <div><h5>{{anime.title}}</h5></div>
+     <div><a href= "/anime/{{ anime._id}}"><img src={{anime.img}}></a></div>
+        </div>
+
     {% endfor %}
     </div>
+</div>
+    <!-- </div> -->
+
 {% endblock %}

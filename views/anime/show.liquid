@@ -2,13 +2,16 @@
 
 {% block content %}
       <div>
+        <iframe  width="100%" height="820"
+        src={{anime.video}}>
+       </iframe>
         <!-- <form action="/home" method="post"> -->
         <article>
             <h2>{{anime.title}}</h2>
+            
             <img src={{anime.img}}>
-            <iframe width="620" height="420"
-            src={{anime.video}}>
-           </iframe>
+            
+       
            <!-- <video id="videoPlayer" width="650" controls muted="muted" autoplay>
             <source src="https://www.youtube.com/embed/bT9csxkth8g"  />
           </video> -->
@@ -16,12 +19,12 @@
             src="https://www.youtube.com/embed/bT9csxkth8g?autoplay=1&mute=1">
            </iframe> -->
             <h3>Description</h3>
-            {{anime.description}}
+           <p class="paragraph">{{anime.description}}</p>
         </article>
         <!-- <input type="submit" value="Add To Watchlist">
       </form> -->
-        <a href="/anime/"><button>Back to Main Menu</button></a>
-        <a href="/anime/{{ anime._id }}/edit"><button>EDIT Anime</button></a>
+        <a href="/anime/"><button class="btn btn-primary">Back to Main Menu</button></a>
+        <a href="/anime/{{ anime._id }}/edit"><button class="btn btn-success">EDIT Anime</button></a>
        
         
         <form action="/anime/{{ anime._id }}?_method=DELETE" method="POST">

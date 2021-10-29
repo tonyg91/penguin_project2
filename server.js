@@ -9,7 +9,11 @@ const methodOverride = require("method-override")
 const path = require("path")
 const Anime = require("./models/anime")
 const AnimeRouter = require("./controllers/anime")
+// User Router
+const UserRouter = require("./controllers/user")
 
+const session = require("express-session") // session middleware
+const MongoStore = require("connect-mongo") // save sessions in mongo
 
 /////////////////////////////////
 // Liquid configuration
@@ -40,7 +44,13 @@ app.use(express.urlencoded({extended: true}))
 // Public file connection
 app.use(express.static("public"))
 
-
+// middleware to create sessions (req.session)
+app.use(session({
+   secret: process.env.SECRET,
+   store: MongoStore.create({mongoUrl: process.env.DATABASE_URL}),
+   resave: false,
+   saveUninitialized: true
+}))
 
 /////////////////////////////
 // Routes
@@ -65,6 +75,8 @@ app.get("/", (req, res) => {
 
 // Register Anime Router 
 app.use("/anime", AnimeRouter)
+
+app.use("/user", UserRouter)
 
 //////////////////////
 // Set up listener

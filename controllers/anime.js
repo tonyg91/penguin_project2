@@ -14,13 +14,27 @@ const Anime = require("../models/anime")
 // Declare router
 const router = express.Router()
 
+///////////////////////////////////
+// Router Middleware
+//////////////////////////////////
+
+router.use((req, res, next) => {
+    // check if logged in 
+      if (req.session.loggedIn){
+        // send to routes
+        next()
+      } else {
+        res.redirect("/user/login")
+      }
+  })
+
 ////////////////////
 // Routes
 /////////////////////
 
 // Index Route
 router.get("/", (req, res) => {
-    Anime.find({})
+    Anime.find({username: req.session.username})
     .then((animes) => {
         res.render("anime/index.liquid", {animes})
     })
@@ -37,6 +51,9 @@ router.get("/new", (req, res) => {
 
 // Create Route
 router.post("/", (req, res) => {
+     // add the username to req.body to track user
+     req.body.username = req.session.username
+     
     Anime.create(req.body)
     .then((animes) => {
         res.redirect("/anime")
