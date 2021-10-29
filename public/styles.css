@@ -33,8 +33,9 @@ img{
     text-align: center;
 }
 #carousel{
-   margin-left: 25em;
-   margin-right: 25em;
+   margin-left: 15em;
+   margin-right: 15em;
+   margin-bottom: 8em;
 }
 header{
     text-align: center;
