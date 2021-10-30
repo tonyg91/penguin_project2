@@ -25,9 +25,17 @@
       </label>
 
     </fieldset>
-    <input type="submit" value="Add New Anime" />
+
+    <input type="submit" value="Add New Anime" class="btn btn-success"/>
     
-    <a href="/anime/"><button>Cancel</button></a>
+    <a href="/anime"><button type="button" class="btn btn-danger">Cancel</button></a>
+  
   </form>
 </div>
+<h1>How to upload a video to page</h1>
+<h4>Each Youtube video has a uniqe identifier for example (https://www.youtube.com/watch?v=ycP1a7-1MhE) This links identifer is (ycP1a7-1MhE). When converting your link to work on the page you will want the change it to look like this (https://www.youtube.com/embed/ycP1a7-1MhE?autoplay=1&mute=1). You will notice in the link that embed was added before the identifer and after the identifer we added some setting after it. Such as ?autopay=1 this is the setting that will start the video on open. And &mute=1 so that the video audio will not start because no one likes it when they open a page and has something blaring at them. If you are succesful you will have a video playing like the one below.</h4>
+<h1>Spoilers Below</h1>
+<iframe  width="100%" height="820"
+src="https://www.youtube.com/embed/n5GO0ZiE7rU?autoplay=1&mute=1">
+</iframe>
 {% endblock %}

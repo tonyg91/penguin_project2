@@ -19,10 +19,11 @@
             src="https://www.youtube.com/embed/bT9csxkth8g?autoplay=1&mute=1">
            </iframe> -->
             <h3>Description</h3>
-           <p class="paragraph">{{anime.description}}</p>
+           <h5 class="paragraph">{{anime.description}}</h5>
         </article>
         <!-- <input type="submit" value="Add To Watchlist">
       </form> -->
+      <footer>
         <a href="/anime/"><button class="btn btn-primary">Back to Main Menu</button></a>
         <a href="/anime/{{ anime._id }}/edit"><button class="btn btn-success">EDIT Anime</button></a>
        
@@ -30,5 +31,6 @@
         <form action="/anime/{{ anime._id }}?_method=DELETE" method="POST">
             <input class="delete" type="submit" value="Remove from Watchlist" />
           </form>
+        </footer>
       </div>
 {% endblock %}

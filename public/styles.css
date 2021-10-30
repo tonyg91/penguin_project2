@@ -7,17 +7,23 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
-    
+    font-family: "Marker Felt";
 }
 img{
     width: 30%;
 }
 .container-fluid{
     display: flex;
-    width: 70%;
-    height: 30%;
+    background-image: url("https://avante.biz/wp-content/uploads/Bleach-Wallpapers-Free-Download/Bleach-Wallpapers-Free-Download-004.jpg");
+    background-size: cover;
+    background-position:right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 80%;
+    height: 10%;
     box-shadow: 4px 4px 8px white;
-    margin: 50px 90px 0px 20em;
+    margin: 50px 90px 0px 10em;
+    
 }
 .container-fluid img{
     width: 100%;
@@ -32,6 +38,12 @@ img{
     margin: 40px 40px 30px 3em;
     box-shadow: 4px 4px 8px white;
     text-align: center;
+    background-image: url("https://birchtree.nyc3.digitaloceanspaces.com/2020-uploads/darkwall-4.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
 }
 #carousel{
    margin-left: 15em;
@@ -40,6 +52,9 @@ img{
 }
 header{
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    font-family: "Chalkduster";
 }
 .delete{
     background-color: red;
@@ -47,10 +62,19 @@ header{
     border-radius: 50px;
 }
 .paragraph{
+    display: inline;
+    text-align: center;
     width: 50%;
-    margin: 30px 50px 0px 20em;
+    
 }
-
+footer{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-top: 3px solid white;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
 /* *************************
 ** Media Query
 *************************** */
@@ -81,10 +105,13 @@ header{
         margin: 30px 50px 10px 1em;
     }
     .col-md-3{
-        display: inline;
-        width: 90%;
+        display: inline-block;
+        width: 80%;
         margin: 10px 10px 10px 10px;
         box-shadow: 4px 4px 8px white;
         text-align: center;
+    }
+    header{
+        display: inline-block;
     }
 }

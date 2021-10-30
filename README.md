@@ -31,7 +31,8 @@ List your routes in a table
 | /anime/:id | delete | (delete) redirect to /anime after delete |
 
 ## User Stories
-The user will be able to go the site and on the home screen it will have photos and name on the anime, as well as a carousel under the title that flips through anime images in a time increment. There wiill also be two links one link will be to add an anime to there watchlist and the other to navigate to a index page of there saved shows. When the user clicks on an image it will take them to a show page the user will see a breif description of the anime as well as a video preview. And have a button to add to there watchlist and a back to home page button. 
+The user will be able to go the site and on the home screen it will have photos and name on the anime, as well as a carousel under the title that flips through anime images in a time increment. There wiill also be two links one link will be to add an anime to there watchlist and the other to navigate to a index page of there saved shows. When the user clicks on an image it will take them to a show page the user will see a breif description of the anime as well as a video preview. And have a button to add to there watchlist and a back to home page button.
+
 ## Challenges
 
 - detail roadblocks and anything you did to overcome whether you did or didn't
@@ -42,3 +43,11 @@ The user will be able to go the site and on the home screen it will have photos 
 -Bootstrap
 -Express
 -MongoDB
+
+## Sources 
+Fonts - https://www.tutorialbrain.com/css_tutorial/css_font_family_list/ 
+
+Descriptions- 
+Barnes&Noble- https://www.barnesandnoble.com/b/books/graphic-novels-comics/manga/_/N-29Z8q8Zucc 
+
+Crunchyroll -https://www.crunchyroll.com/ 
