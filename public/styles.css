@@ -7,6 +7,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
+    
 }
 img{
     width: 30%;
@@ -47,5 +48,43 @@ header{
 }
 .paragraph{
     width: 50%;
-    margin: 30px 90px 0px 30em;
+    margin: 30px 50px 0px 20em;
+}
+
+/* *************************
+** Media Query
+*************************** */
+
+@media (max-width: 600px) {
+    #carousel{
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 3em;
+     }
+     .container-fluid{
+        display: flex;
+        width: 80%;
+        height: 30%;
+        box-shadow: 4px 4px 8px white;
+        margin: 50px 50px 0px 2em;
+    }
+    .container-fluid img{
+        width: 50%;
+    }
+    iframe{
+        width: 80%;
+        height: 60%;
+    }
+    .paragraph{
+        display: inline;
+      
+        margin: 30px 50px 10px 1em;
+    }
+    .col-md-3{
+        display: inline;
+        width: 90%;
+        margin: 10px 10px 10px 10px;
+        box-shadow: 4px 4px 8px white;
+        text-align: center;
+    }
 }
