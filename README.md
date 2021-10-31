@@ -35,7 +35,10 @@ The user will be able to go the site and on the home screen it will have photos 
 
 ## Challenges
 
-- detail roadblocks and anything you did to overcome whether you did or didn't
+- Day One I struggled with Creating a new route for a seperate page for users to add shows to their watch list. Still Googling a Solution.
+
+-Day Two I struggled with adding videos to the show pages for preview I was getting a Youtube refused to connect error. After a few hours of trying to figure out what was wrong I asked for help and It turns out I just had bad seed data.
+
 
 ## List of Technologies
 -HTML
