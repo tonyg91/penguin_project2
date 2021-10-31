@@ -5,15 +5,15 @@
 const express = require("express")
 
 const Anime = require("../models/anime")
-
 const FAVS = require("../models/favorites")
+
 
 /////////////////////////////////////
 // Create Router
 ////////////////////////////////////
 
 // Declare router
-const router = express.Router()
+const routerf = express.Router()
 
 ///////////////////////////////////
 // Router Middleware
@@ -34,40 +34,8 @@ router.use((req, res, next) => {
 /////////////////////
 
 // Index Route
-router.get("/", (req, res) => {
-    Anime.find({username: req.session.username})
-    .then((animes) => {
-        res.render("anime/index.liquid", {animes})
-    })
-     // error handeling
-     .catch((error) => {
-        res.json((error))
-    })
-})
-
-// New Route 
-router.get("/new", (req, res) => {
-    res.render("anime/new.liquid")
-})
-
-// Create Route
-router.post("/", (req, res) => {
-     // add the username to req.body to track user
-     req.body.username = req.session.username
-     
-    Anime.create(req.body)
-    .then((animes) => {
-        res.redirect("/anime")
-    })
-      // error handeling
-      .catch((error) => {
-        res.json((error))
-    })
-})
-
-// Index Route
-router.get("/favorites", (req, res) => {
-    Anime.find({username: req.session.username})
+routerf.get("/", (req, res) => {
+    FAVS.find({username: req.session.username})
     .then((animes) => {
         res.render("favorites/index.liquid", {animes})
     })
@@ -77,19 +45,24 @@ router.get("/favorites", (req, res) => {
     })
 })
 
+// New Route 
+routerf.get("/new", (req, res) => {
+    res.render("anime/new.liquid")
+})
+
 // Create Route
 router.post("/favorites", (req, res) => {
-    // add the username to req.body to track user
-    req.body.username = req.session.username
-    
-   FAVS.create(req.body)
-   .then((animes) => {
-       res.redirect("/anime")
-   })
-     // error handeling
-     .catch((error) => {
-       res.json((error))
-   })
+     // add the username to req.body to track user
+     req.body.username = req.session.username
+     
+    FAVS.create(req.body)
+    .then((animes) => {
+        res.redirect("/anime")
+    })
+      // error handeling
+      .catch((error) => {
+        res.json((error))
+    })
 })
 
 // Edit Route
@@ -106,7 +79,7 @@ router.get("/:id/edit", (req, res) => {
 })
 
 // Update Route 
-router.put("/:id", (req, res) => {
+routerf.put("/:id", (req, res) => {
     const id = req.params.id
     Anime.findByIdAndUpdate(id, req.body, {new: true})
     .then((anime) => {
@@ -121,7 +94,7 @@ router.put("/:id", (req, res) => {
 
 
 // Delete Route 
-router.delete("/:id", (req, res) => {
+routerf.delete("/:id", (req, res) => {
     const id = req.params.id
     Anime.findByIdAndRemove(id)
     .then((anime) => {
@@ -134,7 +107,7 @@ router.delete("/:id", (req, res) => {
 })
 
 // Show Route
-router.get("/:id", (req, res) => {
+routerf.get("/:id", (req, res) => {
     const id = req.params.id
     Anime.findById(id)
     .then((anime) => {
@@ -150,4 +123,4 @@ router.get("/:id", (req, res) => {
 // Export the router
 /////////////////////////////////
 
-module.exports = router 
+module.exports = routerf
