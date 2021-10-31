@@ -1,0 +1,23 @@
+{%layout "layout.liquid"%}
+{% block content%}
+<header>
+    <h1>My Watchlist </h1>
+</header>
+<a href="/anime/"><button class="btn btn-primary">Back to Main Menu</button></a>
+
+<!-- <div class="container"> -->
+<div class="container-fluid">
+    <div class="row">
+        {% for anime in animes %}
+        <div class="col-md-3">
+        <div><h5>{{anime.title}}</h5>
+    </div>
+
+    <div>
+     <a href= "/anime/{{ anime._id}}"><img src={{anime.img}}></a>
+    </div>
+    
+    </div>
+    {% endfor %}
+   
+{% endblock %}

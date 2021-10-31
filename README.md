@@ -29,6 +29,11 @@ List your routes in a table
 | /anime/:id/edit | get | (edit) from to edit the anime show page|
 | /anime/:id | put |(update) redirect to /anime after update |
 | /anime/:id | delete | (delete) redirect to /anime after delete |
+| /signup | get | render signup.liquid |
+| /signup | post | add user to database and redirect to login |
+| /login | get | render login.liquid |
+| /login | post | if user info is correct redirect to index page |
+
 
 ## User Stories
 The user will be able to go the site and on the home screen it will have photos and name on the anime, as well as a carousel under the title that flips through anime images in a time increment. There wiill also be two links one link will be to add an anime to there watchlist and the other to navigate to a index page of there saved shows. When the user clicks on an image it will take them to a show page the user will see a breif description of the anime as well as a video preview. And have a button to add to there watchlist and a back to home page button.
@@ -39,6 +44,9 @@ The user will be able to go the site and on the home screen it will have photos 
 
 -Day Two I struggled with adding videos to the show pages for preview I was getting a Youtube refused to connect error. After a few hours of trying to figure out what was wrong I asked for help and It turns out I just had bad seed data.
 
+-Day Three I had some issue with figuing out how to properly use bootstrap. But after some help and more reading I was able to figure it out and add some slideshow carousel. 
+
+-Day Four I Struggled with added a user page for the users personal watch page. I was able to add a user.liquid and add a post method to the show page but when posting it appears as blank. 
 
 ## List of Technologies
 -HTML

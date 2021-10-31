@@ -90,6 +90,33 @@ router.put("/:id", (req, res) => {
     })
 })
 
+// User Route 
+router.get("/user", (req, res) => {
+    Anime.find({username: req.session.username})
+    .then((animes) => {
+        res.render("anime/user.liquid", {animes})
+    })
+     // error handeling
+     .catch((error) => {
+        res.json((error))
+    })
+})
+
+// Create Route
+router.post("/user", (req, res) => {
+    // add the username to req.body to track user
+    req.body.username = req.session.username
+    
+   Anime.create(req.body)
+   .then((animes) => {
+       res.redirect("/anime/user")
+   })
+     // error handeling
+     .catch((error) => {
+       res.json((error))
+   })
+})
+
 // Delete Route 
 router.delete("/:id", (req, res) => {
     const id = req.params.id
