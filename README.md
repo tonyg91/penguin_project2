@@ -62,3 +62,7 @@ Descriptions-
 Barnes&Noble- https://www.barnesandnoble.com/b/books/graphic-novels-comics/manga/_/N-29Z8q8Zucc 
 
 Crunchyroll -https://www.crunchyroll.com/ 
+
+Bootstrap Carousel - https://getbootstrap.com/docs/5.1/components/carousel/ 
+
+How to add Youtube Videos - https://www.w3schools.com/html/html_youtube.asp 
