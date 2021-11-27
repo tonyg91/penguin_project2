@@ -40,13 +40,11 @@
     <h1>Recommended Anime</h1>
     
     <a href="/anime/new" ><button type="button" class="btn btn-primary">Add Anime</button></a>
-    <a href="/anime/favorites"><button class="btn btn-primary">My Watchlist</button></a>
     <a href="/user/logout"><button type="button" class="btn btn-success">Logout</button></a>
   </header>
 
     
-    <!-- <div class="container"> -->
-      <form action="/anime/favorties" method="post">   
+    <!-- <div class="container"> -->  
 
     <div class="container-fluid">
         <div class="row">
@@ -54,10 +52,7 @@
      <div class="col-md-3">
      <div><h5>{{anime.title}}</h5></div>
      <div><a href= "/anime/{{ anime._id}}"><img src={{anime.img}}></a></div>
-     <input type="submit" value="Add to watchlist">
-    </form>
         </div>
-        
     {% endfor %}
     </div>
 </div>

@@ -3,7 +3,7 @@ body{
     color: white;
     background-image: url("https://birchtree.nyc3.digitaloceanspaces.com/2020-uploads/darkwall-4.jpeg");
     background-size: cover;
-    background-position: center;
+    background-position: center; 
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
