@@ -6,7 +6,7 @@ const express = require("express")
 
 const Anime = require("../models/anime")
 
-const FAVS = require("../models/favorites")
+
 
 /////////////////////////////////////
 // Create Router
@@ -63,33 +63,6 @@ router.post("/", (req, res) => {
       .catch((error) => {
         res.json((error))
     })
-})
-
-// Index Route
-router.get("/favorites", (req, res) => {
-    Anime.find({username: req.session.username})
-    .then((animes) => {
-        res.render("favorites/index.liquid", {animes})
-    })
-     // error handeling
-     .catch((error) => {
-        res.json((error))
-    })
-})
-
-// Create Route
-router.post("/favorites", (req, res) => {
-    // add the username to req.body to track user
-    req.body.username = req.session.username
-    
-   FAVS.create(req.body)
-   .then((animes) => {
-       res.redirect("/anime")
-   })
-     // error handeling
-     .catch((error) => {
-       res.json((error))
-   })
 })
 
 // Edit Route
